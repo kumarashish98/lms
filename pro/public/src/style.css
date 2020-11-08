@@ -1,0 +1,370 @@
+/**************
+ * Base Styles
+ **************/
+html {
+  border-top: 4px solid #176691;
+}
+
+body {
+  margin: 1.5em 0;
+  background: #fff;
+  color: #222;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 87.5%;
+  line-height: 1.5;
+}
+
+@media (min-width: 48em) {
+  body {
+    font-size: 100%;
+  }
+}
+
+p, div, ul, ol, blockquote, form, iframe, table, hr, td, th, button, textarea, section, article, aside {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin: 0 0 1.5em 0;
+}
+
+h1 {
+  font-size: 2.375em;
+  line-height: 1.26316em;
+  margin: 0 0 0.63158em 0;
+}
+
+h2 {
+  font-size: 1.75em;
+  line-height: 1.71429em;
+  margin: 0 0 0.85714em 0;
+}
+
+h3 {
+  font-size: 1.3125em;
+  line-height: 1.14286em;
+  margin: 0 0 1.14286em 0;
+}
+
+h4, h5, h6 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin: 0 0 1.5em 0;
+}
+
+/* Lists */
+ol, ul {
+  margin-left: 1.25em;
+  padding-left: 0;
+}
+
+/* Forms */
+form {
+  margin-top: 1em;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+  color: #333;
+}
+
+label {
+  font-weight: 700;
+}
+
+input,
+textarea {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 1.5em;
+  padding: .625em;
+}
+
+textarea {
+  height: 4em;
+  resize: vertical;
+}
+
+button {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: .625em 1em;
+  color: #ffffff;
+  transition : all 200ms linear;
+  background-color: #176691;
+}
+
+button:hover,
+button:active,
+button:focus {
+  background-color: #0d384f;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-radius: 4px;
+}
+
+table thead,
+table tbody,
+table tfoot {
+  border: 1px solid #f1f1f1;
+  background-color: #f8f8f8;
+}
+
+table thead {
+  background: #ddd;
+}
+
+table tfoot {
+  background: #f1f1f1;
+}
+
+table thead th,
+table thead td,
+table tfoot th,
+table tfoot td {
+  padding: .625em;
+  font-weight: bold;
+  text-align: left;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #eee;
+}
+
+table tbody th,
+table tbody td {
+  padding: .625em;
+}
+
+/* Blockquote */
+blockquote {
+  border-left: 4px solid #176691;
+  margin-left: 2em;
+  padding: 1em;
+  background-color: #f1f1f1;
+  font-style: italic;
+}
+
+/* Pre */
+pre {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #f1f1f1;
+}
+
+/* Images */
+img {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Links */
+a {
+  transition: all 200ms linear;
+  color: #176691;
+  text-decoration: none;
+}
+
+a:active,
+a:hover,
+a:focus {
+  color: #0d384f;
+}
+
+/********
+* Layout
+*********/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 91.25%;
+}
+
+.container--max {
+  width: 65em;
+}
+
+.container:before,
+.container:after {
+  display: table;
+  content: ' ';
+}
+
+.container:after {
+  clear: both;
+}
+
+.padding-l-r {
+  padding-left: 1.3889%;
+  padding-right: 1.3889%;
+  width: 100%;
+}
+
+@media (min-width: 48em) {
+  .sm-one-third {
+    float: left;
+    padding-left: 1.3889%;
+    padding-right: 1.3889%;
+    width: 33.3333%;
+  }
+
+  .sm-two-thirds {
+    float: left;
+    padding-left: 1.3889%;
+    padding-right: 1.3889%;
+    width: 66.6667%;
+  }
+}
+
+/**********
+ * Modules
+ **********/
+/* Site Header */
+.course-info p {
+  margin-bottom: 0;
+}
+
+.course-info::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid #0d384f;
+  margin-top: 2em;
+  width: 5em;
+}
+
+/* Lesson List */
+.lessons {
+  display: none;
+  border-bottom: 1px solid #ddd;
+}
+
+@media (min-width: 48em) {
+  .lessons {
+    border: 0;
+  }
+}
+
+.lesson--item {
+  padding: .625em 0;
+}
+
+.lesson--item:hover,
+.lesson--item:active,
+.lesson--item:focus {
+  cursor: move;
+}
+
+/* Single Lesson */
+#text {
+  height: 20em;
+}
+
+/* Icons */
+.icon {
+  height: 1.25em;
+  width: 1.25em;
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.icon:active {
+  position: relative;
+  top: .0625em;
+  left: .0625em;
+}
+
+.actions {
+  border-top: 1px solid #ccc;
+  margin-top: 1.5em;
+  width: 5em;
+}
+
+.actions span {
+  display: inline-block;
+  margin-top: 1.5em;
+}
+
+.actions span:not(:last-child) {
+  margin-right: 1em;
+}
+
+/* Site Footer */
+.site-footer {
+  margin-top: 3em;
+}
+
+.site-footer__links {
+  padding: 0;
+  list-style-type: none;
+}
+
+.site-footer__links::before {
+  content: '';
+  display: block;
+  border-bottom: 2px solid #0d384f;
+  margin-bottom: 2em;
+  width: 5em;
+}
+
+.site-footer__links a {
+  display: block;
+  padding: .5em 0;
+}
+
+/* SimpleMDE */
+.editor-toolbar {
+  margin-bottom: 0;
+}
+
+/* Alert */
+.alert {
+  position: relative;
+  border: 1px solid #944D47;
+  border-radius: 4px;
+  padding: 1em;
+  background-color: #F0BBB7;
+}
+
+.close-alert {
+  position: absolute;
+  top: 0;
+  right: .25em;
+  height: 1.5em;
+  width: 1.5em;
+  font-size: 1.5em;
+  text-align: right;
+  cursor: default;
+}
+
+/* Magnific Popup */
+.white-popup-block {
+  position: relative;
+  width: auto;
+  max-width: 38.75em;
+  margin: 1.25em auto;
+  padding: 2em;
+  background: #FFF;
+}
+
+/* About Modal */
+label.show-preference {
+  font-weight: normal;
+}
+
+input[class="show-preference"] {
+  display: inline-block;
+  width: auto;
+  margin-right: .5em;
+}
